@@ -4,7 +4,8 @@
 // Der deutsche Text steht direkt in index.html. Hier stehen nur
 // Englisch und Bengalisch. Jeder Schlüssel gehört zu einem
 // Element mit data-i18n="schlüssel" (bzw. data-i18n-alt für
-// Bild-Beschreibungen). Fehlt eine Übersetzung, bleibt Deutsch.
+// Bild-Beschreibungen, data-i18n-label für aria-label).
+// Fehlt eine Übersetzung, bleibt Deutsch.
 // ------------------------------------------------------------
 const TRANSLATIONS = {
   en: {
@@ -23,8 +24,8 @@ const TRANSLATIONS = {
     'hero.btnAnfahrt': 'Directions',
 
     'about.title': 'About us',
-    'about.p1': 'We are a community of Bengali families and friends who keep our festivals, language and traditions alive together. At the heart of it all is our temple: a place for puja, music, dance, children’s activities and many hours of sharing food.',
-    'about.p2': 'The association is non-profit and open to everyone who would like to get to know Bengali culture.',
+    'about.p1': 'We are a community of families and friends who keep our festivals, languages and traditions alive together. At the heart of it all is our temple: a place for prayer, singing, music, dance, children’s activities and sharing food together.',
+    'about.p2': 'The association is non-profit and open to everyone who would like to get to know Bengali culture and its faith.',
 
     'feste.title': 'Festivals through the year',
     'feste.intro': 'Dates follow the Bengali lunar calendar (Panjika). We publish the detailed programme a few weeks before each festival.',
@@ -59,16 +60,20 @@ const TRANSLATIONS = {
     'cap.1': 'Durga Puja 2025 · Pandal/altar',
     'cap.2': 'Sindoor Khela on Bijoya Dashami',
     'cap.3': 'Kali Puja/Diwali · Diyas, prayers and food',
-    'cap.4': 'Cultural evening · Children’s dance and singing',
+    'cap.4': 'Cultural evening · Dance and singing',
     'cap.5': 'Kali Puja',
     'cap.6': 'Puja food',
     'img.1': 'Durga pratima in the decorated pandal',
     'img.2': 'Women playing Sindoor Khela',
     'img.3': 'Tea lights arranged in the shape of an Om on a brass plate for Diwali',
-    'img.4': 'Children at the festival',
+    'img.4': 'Children in traditional dress before their performance at the cultural evening',
     'img.5': 'The priest performing puja before the Kali pratima',
     'img.6': 'Puja food',
     'img.about': 'Durga Puja at the temple: the community seated in front of the decorated altar with the Durga pratima',
+
+    'lb.close': 'Close',
+    'lb.prev': 'Previous image',
+    'lb.next': 'Next image',
 
     'tempel.title': 'Temple &amp; directions',
     'tempel.adresse': 'Address',
@@ -109,6 +114,7 @@ const TRANSLATIONS = {
     'ds.title': 'Privacy policy',
     'ds.verantwortlich.h': 'Controller',
     'ds.verantwortlich.p': 'Bengali-Austrian Hindu Cultural Association, Herbststraße 54, 1160 Vienna, Austria, hindu@kulturverein.com',
+    'ds.hosting.h': 'Hosting',
     'ds.hosting.p': 'When you visit the website, our web host processes technically necessary data (e.g. IP address, time of access).',
     'ds.fonts.p': 'This website loads fonts from Google Fonts (Google Ireland Limited). In doing so, your IP address is transmitted to Google. Alternatively, the fonts can be embedded locally.',
     'ds.maps.p': 'The map on the homepage is only loaded when you click “Load Google Maps”. Only then is data (including your IP address) transmitted to Google. The legal basis is your consent pursuant to Art. 6(1)(a) GDPR.',
@@ -134,8 +140,8 @@ const TRANSLATIONS = {
     'hero.btnAnfahrt': 'পথনির্দেশ',
 
     'about.title': 'আমাদের কথা',
-    'about.p1': 'আমরা বাঙালি পরিবার ও বন্ধুদের একটি সংঘ। একসঙ্গে আমরা আমাদের উৎসব, ভাষা ও ঐতিহ্যকে বাঁচিয়ে রাখি। সবকিছুর কেন্দ্রে আমাদের মন্দির: পূজা, গান, নাচ, ছোটদের অনুষ্ঠান আর একসঙ্গে খাওয়াদাওয়ার জায়গা।',
-    'about.p2': 'সমিতিটি অলাভজনক এবং বাঙালি সংস্কৃতিকে জানতে আগ্রহী সকলের জন্য উন্মুক্ত।',
+    'about.p1': 'আমরা পরিবার ও বন্ধুদের একটি সংঘ। একসঙ্গে আমরা আমাদের উৎসব, ভাষা ও ঐতিহ্যকে বাঁচিয়ে রাখি। সবকিছুর কেন্দ্রে আমাদের মন্দির: প্রার্থনা, গান-বাজনা, নাচ, ছোটদের অনুষ্ঠান আর একসঙ্গে খাওয়াদাওয়ার জায়গা।',
+    'about.p2': 'সমিতিটি অলাভজনক এবং বাঙালি সংস্কৃতি ও তার ধর্মবিশ্বাসকে জানতে আগ্রহী সকলের জন্য উন্মুক্ত।',
 
     'feste.title': 'বছরের উৎসব',
     'feste.intro': 'তারিখগুলি বাংলা পঞ্জিকা অনুযায়ী। প্রতিটি উৎসবের বিস্তারিত অনুষ্ঠানসূচি আমরা কয়েক সপ্তাহ আগে জানিয়ে দিই।',
@@ -170,16 +176,20 @@ const TRANSLATIONS = {
     'cap.1': 'দুর্গা পূজা ২০২৫ · মণ্ডপ/বেদি',
     'cap.2': 'বিজয়া দশমীতে সিঁদুর খেলা',
     'cap.3': 'কালী পূজা/দীপাবলি · প্রদীপ, প্রার্থনা ও খাওয়াদাওয়া',
-    'cap.4': 'সাংস্কৃতিক সন্ধ্যা · ছোটদের নাচ ও গান',
+    'cap.4': 'সাংস্কৃতিক সন্ধ্যা · নাচ ও গান',
     'cap.5': 'কালী পূজা',
     'cap.6': 'পুজোর খাবার',
     'img.1': 'সাজানো মণ্ডপে দুর্গা প্রতিমা',
     'img.2': 'সিঁদুর খেলায় মহিলারা',
     'img.3': 'দীপাবলিতে পিতলের থালায় ওঁ-এর আকারে সাজানো প্রদীপ',
-    'img.4': 'উৎসবে ছোটরা',
+    'img.4': 'সাংস্কৃতিক সন্ধ্যায় অনুষ্ঠানের আগে ঐতিহ্যবাহী পোশাকে ছোটরা',
     'img.5': 'কালী প্রতিমার সামনে পুরোহিতের পূজা',
     'img.6': 'পুজোর খাবার',
     'img.about': 'মন্দিরে দুর্গা পূজা: সাজানো বেদিতে দুর্গা প্রতিমার সামনে বসে আছেন সবাই',
+
+    'lb.close': 'বন্ধ করুন',
+    'lb.prev': 'আগের ছবি',
+    'lb.next': 'পরের ছবি',
 
     'tempel.title': 'মন্দির ও পথনির্দেশ',
     'tempel.adresse': 'ঠিকানা',
@@ -246,12 +256,14 @@ const I18N = (() => {
   const german = { ...GERMAN_EXTRA, [titleKey]: document.title };
   const textEls = [...document.querySelectorAll('[data-i18n]')];
   const altEls = [...document.querySelectorAll('[data-i18n-alt]')];
+  const labelEls = [...document.querySelectorAll('[data-i18n-label]')];
   const buttons = [...document.querySelectorAll('.lang [data-lang]')];
   let current = 'de';
 
   // Deutschen Originaltext merken, damit man zurückschalten kann
   textEls.forEach((el) => { el.dataset.de = el.innerHTML; });
   altEls.forEach((el) => { el.dataset.deAlt = el.alt; });
+  labelEls.forEach((el) => { el.dataset.deLabel = el.getAttribute('aria-label'); });
 
   function t(key) {
     return (current !== 'de' && TRANSLATIONS[current][key]) || german[key] || key;
@@ -272,6 +284,9 @@ const I18N = (() => {
     });
     altEls.forEach((el) => {
       el.alt = (lang !== 'de' && dict[el.dataset.i18nAlt]) || el.dataset.deAlt;
+    });
+    labelEls.forEach((el) => {
+      el.setAttribute('aria-label', (lang !== 'de' && dict[el.dataset.i18nLabel]) || el.dataset.deLabel);
     });
 
     document.documentElement.lang = lang;
