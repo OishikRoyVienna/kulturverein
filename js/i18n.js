@@ -89,6 +89,33 @@ const TRANSLATIONS = {
     'countdown.days': '<strong>{n} {unit}</strong> to go until {name}',
     'countdown.day': 'day',
     'countdown.dayPlural': 'days',
+
+    // Unterseiten Impressum & Datenschutz
+    'sub.back': '← Back to the homepage',
+    'sub.hinweis': 'This translation is provided for information only. The German version is legally binding.',
+    'imp.pagetitle': 'Legal notice · Bengali-Austrian Hindu Cultural Association',
+    'imp.title': 'Legal notice',
+    'imp.angaben': 'Information pursuant to § 5 ECG and disclosure pursuant to § 25 MedienG (Austrian Media Act)',
+    'imp.verein': 'Bengali-Austrian Hindu Cultural Association<br>Herbststraße 54<br>1160 Vienna, Austria',
+    'imp.zvr': 'Association register no. (ZVR):',
+    'imp.obmann': 'Represented by:',
+    'imp.kontakt': 'Contact:',
+    'imp.email': 'Email:',
+    'imp.zweck.h': 'Purpose of the association:',
+    'imp.zweck.p': 'Non-profit preservation and promotion of Bengali culture and Hindu tradition in Austria, in particular through religious festivals, cultural and children’s programmes.',
+    'imp.richtung.h': 'Basic orientation of the website:',
+    'imp.richtung.p': 'Information about the association, its festivals and events.',
+    'ds.pagetitle': 'Privacy · Bengali-Austrian Hindu Cultural Association',
+    'ds.title': 'Privacy policy',
+    'ds.verantwortlich.h': 'Controller',
+    'ds.verantwortlich.p': 'Bengali-Austrian Hindu Cultural Association, Herbststraße 54, 1160 Vienna, Austria, hindu@kulturverein.com',
+    'ds.hosting.p': 'When you visit the website, our web host processes technically necessary data (e.g. IP address, time of access).',
+    'ds.fonts.p': 'This website loads fonts from Google Fonts (Google Ireland Limited). In doing so, your IP address is transmitted to Google. Alternatively, the fonts can be embedded locally.',
+    'ds.maps.p': 'The map on the homepage is only loaded when you click “Load Google Maps”. Only then is data (including your IP address) transmitted to Google. The legal basis is your consent pursuant to Art. 6(1)(a) GDPR.',
+    'ds.fotos.h': 'Photos',
+    'ds.fotos.p': 'The people in the gallery photos have consented to their publication. If you would like a picture removed, please write to us.',
+    'ds.rechte.h': 'Your rights',
+    'ds.rechte.p': 'You have the right to access, rectification, erasure, restriction of processing, objection and to lodge a complaint with a supervisory authority.',
   },
 
   bn: {
@@ -173,6 +200,34 @@ const TRANSLATIONS = {
     'countdown.days': '{name} আর <strong>{n} {unit}</strong> বাকি',
     'countdown.day': 'দিন',
     'countdown.dayPlural': 'দিন',
+
+    // Unterseiten Impressum & Datenschutz
+    'sub.back': '← মূল পাতায় ফিরুন',
+    'sub.hinweis': 'এই অনুবাদটি শুধুমাত্র তথ্যের জন্য। আইনত জার্মান সংস্করণটিই প্রযোজ্য।',
+    'imp.pagetitle': 'আইনি তথ্য · বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি',
+    'imp.title': 'আইনি তথ্য',
+    'imp.angaben': '§ ৫ ECG অনুযায়ী তথ্য এবং § ২৫ MedienG (অস্ট্রীয় গণমাধ্যম আইন) অনুযায়ী প্রকাশ',
+    'imp.verein': 'বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি<br>Herbststraße 54<br>1160 ভিয়েনা, অস্ট্রিয়া',
+    'imp.zvr': 'সমিতি নিবন্ধন নম্বর (ZVR):',
+    'imp.obmann': 'প্রতিনিধিত্বে:',
+    'imp.kontakt': 'যোগাযোগ:',
+    'imp.email': 'ই-মেল:',
+    'imp.zweck.h': 'সমিতির উদ্দেশ্য:',
+    'imp.zweck.p': 'অস্ট্রিয়ায় বাঙালি সংস্কৃতি ও হিন্দু ঐতিহ্যের অলাভজনক চর্চা ও প্রসার, বিশেষত ধর্মীয় উৎসব, সাংস্কৃতিক ও ছোটদের অনুষ্ঠানের মাধ্যমে।',
+    'imp.richtung.h': 'ওয়েবসাইটের মূল উদ্দেশ্য:',
+    'imp.richtung.p': 'সমিতি, এর উৎসব ও অনুষ্ঠান সম্পর্কে তথ্য।',
+    'ds.pagetitle': 'গোপনীয়তা নীতি · বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি',
+    'ds.title': 'গোপনীয়তা নীতি',
+    'ds.verantwortlich.h': 'দায়িত্বপ্রাপ্ত সংস্থা',
+    'ds.verantwortlich.p': 'বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি, Herbststraße 54, 1160 ভিয়েনা, অস্ট্রিয়া, hindu@kulturverein.com',
+    'ds.hosting.h': 'হোস্টিং',
+    'ds.hosting.p': 'ওয়েবসাইটটি খোলার সময় আমাদের ওয়েব হোস্ট প্রযুক্তিগতভাবে প্রয়োজনীয় তথ্য (যেমন IP ঠিকানা, খোলার সময়) প্রক্রিয়া করে।',
+    'ds.fonts.p': 'এই ওয়েবসাইট Google Fonts (Google Ireland Limited) থেকে ফন্ট লোড করে। এর ফলে আপনার IP ঠিকানা Google-এর কাছে পাঠানো হয়। বিকল্প হিসেবে ফন্টগুলি স্থানীয়ভাবেও যুক্ত করা যায়।',
+    'ds.maps.p': 'মূল পাতার মানচিত্রটি কেবল তখনই লোড হয়, যখন আপনি „Google Maps লোড করুন“-এ ক্লিক করেন। কেবল তখনই তথ্য (আপনার IP ঠিকানা সহ) Google-এর কাছে পাঠানো হয়। আইনি ভিত্তি হলো GDPR-এর অনুচ্ছেদ ৬(১)(ক) অনুযায়ী আপনার সম্মতি।',
+    'ds.fotos.h': 'ছবি',
+    'ds.fotos.p': 'গ্যালারির ছবিতে থাকা ব্যক্তিরা ছবি প্রকাশে সম্মতি দিয়েছেন। কোনো ছবি সরিয়ে ফেলতে চাইলে আমাদের লিখুন।',
+    'ds.rechte.h': 'আপনার অধিকার',
+    'ds.rechte.p': 'আপনার তথ্য জানার, সংশোধনের, মুছে ফেলার, প্রক্রিয়াকরণ সীমিত করার, আপত্তি জানানোর এবং তত্ত্বাবধায়ক কর্তৃপক্ষের কাছে অভিযোগ করার অধিকার আছে।',
   },
 };
 
@@ -186,7 +241,9 @@ const GERMAN_EXTRA = {
 
 const I18N = (() => {
   const STORAGE_KEY = 'sprache';
-  const german = { ...GERMAN_EXTRA, 'page.title': document.title };
+  // Unterseiten geben ihren Titel-Schlüssel über <html data-i18n-title="..."> an
+  const titleKey = document.documentElement.dataset.i18nTitle || 'page.title';
+  const german = { ...GERMAN_EXTRA, [titleKey]: document.title };
   const textEls = [...document.querySelectorAll('[data-i18n]')];
   const altEls = [...document.querySelectorAll('[data-i18n-alt]')];
   const buttons = [...document.querySelectorAll('.lang [data-lang]')];
@@ -218,7 +275,7 @@ const I18N = (() => {
     });
 
     document.documentElement.lang = lang;
-    document.title = t('page.title');
+    document.title = t(titleKey);
     buttons.forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === lang));
 
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* z. B. privater Modus */ }

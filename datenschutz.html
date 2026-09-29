@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-i18n-title="ds.pagetitle">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,31 +19,39 @@
                alt="BÖH – Bengalisch-Österreichischer Hinduistischer Kulturverein – zur Startseite">
         </picture>
       </a>
+      <div class="lang" role="group" aria-label="Sprache / Language / ভাষা">
+        <button type="button" data-lang="de" lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="bn" lang="bn" aria-pressed="false">বাংলা</button>
+      </div>
     </div>
   </header>
   <main class="section">
     <div class="wrap about-inner">
-      <p><a href="index.html">← Zur Startseite</a></p>
-      <h1 class="section-title">Datenschutzerklärung</h1>
+      <p><a href="index.html" data-i18n="sub.back">← Zur Startseite</a></p>
+      <h1 class="section-title" data-i18n="ds.title">Datenschutzerklärung</h1>
+      <p class="sub-hinweis" data-i18n="sub.hinweis"></p>
 
-      <h2>Verantwortlicher</h2>
-      <p>Bengalisch-Österreichischer Hinduistischer Kulturverein, Herbststraße 54, 1160 Wien, Österreich, hindu@kulturverein.com</p>
+      <h2 data-i18n="ds.verantwortlich.h">Verantwortlicher</h2>
+      <p data-i18n="ds.verantwortlich.p">Bengalisch-Österreichischer Hinduistischer Kulturverein, Herbststraße 54, 1160 Wien, Österreich, hindu@kulturverein.com</p>
 
-      <h2>Hosting</h2>
-      <p>Beim Aufruf der Website verarbeitet unser Webhoster technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt des Abrufs). [Name und Anschrift des Hosters ergänzen]</p>
+      <h2 data-i18n="ds.hosting.h">Hosting</h2>
+      <p data-i18n="ds.hosting.p">Beim Aufruf der Website verarbeitet unser Webhoster technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt des Abrufs).</p>
 
       <h2>Google Fonts</h2>
-      <p>Diese Website lädt Schriftarten von Google Fonts (Google Ireland Limited). Dabei wird Ihre IP-Adresse an Google übertragen. Alternativ können die Schriften lokal eingebunden werden.</p>
+      <p data-i18n="ds.fonts.p">Diese Website lädt Schriftarten von Google Fonts (Google Ireland Limited). Dabei wird Ihre IP-Adresse an Google übertragen. Alternativ können die Schriften lokal eingebunden werden.</p>
 
       <h2>Google Maps</h2>
-      <p>Die Karte auf der Startseite wird erst geladen, wenn Sie auf „Google Maps laden“ klicken. Erst dann werden Daten (u. a. Ihre IP-Adresse) an Google übertragen. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</p>
+      <p data-i18n="ds.maps.p">Die Karte auf der Startseite wird erst geladen, wenn Sie auf „Google Maps laden“ klicken. Erst dann werden Daten (u. a. Ihre IP-Adresse) an Google übertragen. Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO.</p>
 
-      <h2>Fotos</h2>
-      <p>Personen auf den Fotos in der Galerie haben der Veröffentlichung zugestimmt. Wenn Sie ein Bild entfernen lassen möchten, schreiben Sie uns.</p>
+      <h2 data-i18n="ds.fotos.h">Fotos</h2>
+      <p data-i18n="ds.fotos.p">Personen auf den Fotos in der Galerie haben der Veröffentlichung zugestimmt. Wenn Sie ein Bild entfernen lassen möchten, schreiben Sie uns.</p>
 
-      <h2>Ihre Rechte</h2>
-      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Beschwerde bei einer Aufsichtsbehörde.</p>
+      <h2 data-i18n="ds.rechte.h">Ihre Rechte</h2>
+      <p data-i18n="ds.rechte.p">Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Beschwerde bei einer Aufsichtsbehörde.</p>
     </div>
   </main>
+  <script src="js/i18n.js"></script>
+  <script>I18N.init();</script>
 </body>
 </html>

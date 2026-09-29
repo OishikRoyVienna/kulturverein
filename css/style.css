@@ -321,6 +321,9 @@ html[lang="bn"] body { line-height: 1.75; }
 .section-intro { max-width: 40rem; color: var(--muted); margin: 0 0 2rem; }
 
 .about-inner { max-width: 44rem; }
+/* Hinweis „Deutsche Fassung ist verbindlich“ – nur in EN/BN gefüllt */
+.sub-hinweis { font-size: .9rem; font-style: italic; color: var(--muted); }
+.sub-hinweis:empty { display: none; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
