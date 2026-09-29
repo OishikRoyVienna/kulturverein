@@ -1,0 +1,729 @@
+/* ------------------------------------------------------------
+   Farben: weißer Sari-Stoff mit goldgelbem Rand und
+   Ringelblumen-Girlanden. Hier zentral änderbar.
+   --akzent: Flächen, Rahmen, Linien
+   --akzent-text: Text in Akzentfarbe (im hellen Modus dunkler, damit lesbar)
+   --akzent-ink: Schrift auf Akzent-Flächen
+   ------------------------------------------------------------ */
+:root {
+  --ground: #FAF7F2;      /* Sari-Weiß */
+  --surface: #FFFFFF;
+  --ink: #2B1614;         /* dunkles Braun-Schwarz */
+  --muted: #6E5550;
+  --akzent: #E4A11B;      /* Goldgelb */
+  --akzent-text: #8A5A00;
+  --akzent-ink: #2B1614;
+  --marigold: #E4A11B;    /* Ringelblume */
+  --line: #E8DCD3;
+  --shadow: 0 1px 2px rgb(43 22 20 / .06), 0 8px 24px rgb(43 22 20 / .08);
+
+  --font-display: "Tiro Bangla", "Noto Serif Bengali", Georgia, serif;
+  --font-body: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+
+  --radius: 6px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #1A1011;
+    --surface: #24181A;
+    --ink: #F4EAE2;
+    --muted: #BFA9A2;
+    --akzent: #F0B63E;
+    --akzent-text: #F0B63E;
+    --akzent-ink: #1A1011;
+    --marigold: #F0B63E;
+    --line: #3A2A2B;
+    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .3);
+    color-scheme: dark;
+  }
+}
+
+/* ------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;   /* iOS: Schrift im Querformat nicht aufblähen */
+  text-size-adjust: 100%;
+}
+body { -webkit-tap-highlight-color: rgb(228 161 27 / .2); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--akzent-text); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--akzent-text);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* ---------- Laal-Paar-Bordüre ---------- */
+.laal-paar {
+  height: 22px;
+  background:
+    linear-gradient(var(--ground), var(--ground)) 0 4px / 100% 2px no-repeat,
+    linear-gradient(var(--ground), var(--ground)) 0 16px / 100% 2px no-repeat,
+    var(--akzent);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--ground);
+  border-bottom: 4px solid var(--akzent);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: .75rem;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.brand-logo { height: 52px; width: auto; }
+
+.nav { display: flex; gap: 1.5rem; margin-left: auto; }
+
+/* ---------- Sprachumschalter ---------- */
+.lang {
+  display: flex;
+  border: 1.5px solid var(--akzent);
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang button {
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: .45rem .6rem;
+  background: transparent;
+  color: var(--akzent-text);
+  border: 0;
+  cursor: pointer;
+}
+.lang button + button { border-left: 1.5px solid var(--akzent); }
+.lang button[lang="bn"] { font-family: var(--font-display); font-weight: 400; font-size: .95rem; }
+.lang button:hover { background: rgb(228 161 27 / .15); }
+.lang button[aria-pressed="true"] { background: var(--akzent); color: var(--akzent-ink); }
+
+/* Auf Bengalisch steht der Festname schon in der Überschrift */
+html[lang="bn"] .event-bn { display: none; }
+html[lang="bn"] body { line-height: 1.75; }
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  padding-block: .25rem;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { border-bottom-color: var(--marigold); }
+
+.nav-toggle {
+  display: none;
+  font: inherit;
+  font-weight: 600;
+  background: none;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding: .35rem .8rem;
+  cursor: pointer;
+}
+
+/* Bis Tablet-Breite: Menü hinter „Menü“-Button (auf EN/বাংলা sind die Menüpunkte länger) */
+@media (max-width: 1000px) {
+  .nav-toggle { display: block; }
+  .lang { margin-left: auto; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--ground);
+    border-bottom: 4px solid var(--akzent);
+    padding: .5rem 1.25rem 1rem;
+  }
+  .nav.open { display: flex; }
+  .nav a { padding-block: .85rem; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
+  .nav a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 600px) {
+  .brand-logo { height: 42px; }
+  .header-inner { gap: .6rem; }
+}
+@media (max-width: 380px) {
+  .brand-logo { height: 32px; }
+  .lang button { padding-inline: .45rem; }
+}
+
+/* ---------- Touch-Geräte: Finger-freundliche Flächen ---------- */
+@media (pointer: coarse) {
+  .lang button, .nav-toggle { min-height: 44px; }
+  .lang button { min-width: 44px; }
+  .btn { padding-block: .85rem; }
+  .contact-line a { padding-block: .4rem; }
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .7rem 1.4rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--akzent);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.btn-primary { background: var(--akzent); color: var(--akzent-ink); }
+.btn-ghost { background: transparent; color: var(--akzent-text); }
+@media (hover: hover) {
+  .btn-primary:hover { background: transparent; color: var(--akzent-text); }
+  .btn-ghost:hover { background: var(--akzent); color: var(--akzent-ink); }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: 4rem 3.5rem;
+  overflow: hidden;
+  /* Hintergrundbild, links abgedunkelt damit der Text lesbar bleibt.
+     Im Hero immer helle Schrift, auch im hellen Modus. */
+  --ink: #F7EEE6;
+  --muted: #E3D2C8;
+  --akzent: #F0B63E;
+  --akzent-text: #F0B63E;
+  --akzent-ink: #1A1011;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 50%, rgb(20 8 8 / .45) 100%),
+    /* vergrößert und rechtsbündig, damit die Figur links steht und nicht hinter dem Rad */
+    url("../images/hero-durga.jpg") right 10% / 140% auto no-repeat,
+    #2A0E0E;
+}
+@media (max-width: 760px) {
+  .hero {
+    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-durga.jpg");
+    background-size: auto, cover;
+    background-position: center, center 30%;
+  }
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.greeting {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--akzent-text);
+  margin: 0 0 .25rem;
+}
+.hero h1 { font-size: clamp(2.6rem, 7vw, 4.75rem); }
+.hero-dates {
+  margin: .75rem 0 0;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .02em;
+}
+.lead { max-width: 34rem; margin: 1.25rem 0 0; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+.countdown {
+  margin: 1.25rem 0 0;
+  font-size: .95rem;
+  color: var(--muted);
+}
+.countdown strong { color: var(--akzent-text); font-variant-numeric: tabular-nums; }
+
+.hero-art { color: var(--marigold); justify-self: center; display: grid; width: min(100%, 360px); }
+/* Rad und Durga-Gesicht liegen übereinander; nur das Rad dreht sich */
+.hero-art > * { grid-area: 1 / 1; }
+.hero-art > svg { width: 100%; height: auto; }
+.alpana { opacity: .9; }
+.hero-art > .durga-face {
+  width: 36%; place-self: center;   /* füllt den inneren Kreis des Rads */
+  filter: drop-shadow(0 2px 6px rgb(0 0 0 / .25));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .alpana { animation: turn 60s linear infinite; }
+  .mond-oberflaeche { animation: turn 45s linear infinite; }
+  .sternschnuppen span:nth-child(1) { animation: sternschnuppe 4s ease-in 1s infinite; }
+  .sternschnuppen span:nth-child(2) { animation: sternschnuppe 5.5s ease-in 2.5s infinite; }
+  .sternschnuppen span:nth-child(3) { animation: sternschnuppe 7s ease-in 4s infinite; }
+  @keyframes sternschnuppe {
+    0%   { opacity: 0; transform: rotate(-32deg) translateX(0); }
+    3%   { opacity: 1; }
+    14%  { opacity: 0; transform: rotate(-32deg) translateX(-380px); }
+    100% { opacity: 0; transform: rotate(-32deg) translateX(-380px); }
+  }
+  @keyframes turn { to { transform: rotate(360deg); } }
+}
+
+@media (max-width: 760px) {
+  .hero { padding-block: 2.5rem; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-art { order: -1; }
+  .hero-art { width: 180px; }
+}
+
+/* ---------- Sektionen ---------- */
+.section { padding-block: 4rem; }
+@media (max-width: 600px) { .section { padding-block: 2.75rem; } }
+.section-title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+.section-intro { max-width: 40rem; color: var(--muted); margin: 0 0 2rem; }
+
+.about-inner { max-width: 44rem; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-photo { margin: 0 12px 12px 0; }
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 12px 12px 0 var(--akzent);   /* goldener Versatz-Rahmen */
+}
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+.about p { margin: 0 0 1rem; }
+
+/* ---------- Feste ---------- */
+.events {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+/* Feste: dunkler Nachthimmel mit Shiva rechts, gedimmt.
+   Wie im Hero immer helle Schrift; Karten halbtransparent. */
+.feste {
+  --ink: #F4EAE2;
+  --muted: #C8B9C6;
+  --surface: rgb(18 12 28 / .6);
+  --line: rgb(255 255 255 / .12);
+  --akzent: #F0B63E;
+  --akzent-text: #F0B63E;
+  --akzent-ink: #1A1011;
+  --shadow: 0 8px 24px rgb(0 0 0 / .35);
+  color: var(--ink);
+  position: relative;
+  isolation: isolate;
+  background: #0B0A17;
+}
+/* Shiva-Bild als eigene Ebene: so hoch wie der Abschnitt, rechtsbündig,
+   nach links weich ausgeblendet (keine harte Bildkante) */
+.feste::before,
+.feste::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.feste::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  aspect-ratio: 736 / 1309;
+  background: url("../images/feste-shiva.jpg") center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 55%);
+}
+/* Abdunkelung darüber: links stärker (Text), rechts schwächer (Shiva).
+   Oben und unten zusätzlich ein weicher Übergang zwischen Seitenfarbe und
+   Nachthimmel (viele Stufen mit sanft abnehmender Deckkraft, damit keine
+   Streifen entstehen) */
+.feste {
+  --daemmerung-stufen:
+    var(--ground) 0%,
+    color-mix(in srgb, var(--ground) 90%, transparent) 12%,
+    color-mix(in srgb, var(--ground) 72%, transparent) 28%,
+    color-mix(in srgb, var(--ground) 50%, transparent) 45%,
+    color-mix(in srgb, var(--ground) 28%, transparent) 62%,
+    color-mix(in srgb, var(--ground) 12%, transparent) 80%,
+    transparent 100%;
+  --daemmerung-oben: linear-gradient(to bottom, var(--daemmerung-stufen)) top / 100% 280px no-repeat;
+  --daemmerung-unten: linear-gradient(to top, var(--daemmerung-stufen)) bottom / 100% 280px no-repeat;
+  padding-block: calc(4rem + 150px);   /* Platz für die Übergänge über und unter dem Inhalt */
+}
+@media (max-width: 600px) { .feste { padding-block: calc(2.75rem + 120px); } }
+.feste::after {
+  inset: 0;
+  background:
+    var(--daemmerung-oben),
+    var(--daemmerung-unten),
+    linear-gradient(90deg, rgb(8 7 18 / .92) 0%, rgb(8 7 18 / .7) 45%, rgb(8 7 18 / .3) 100%);
+}
+.feste .wrap { position: relative; }
+.mond {
+  position: absolute;
+  top: -.5rem;
+  right: 1.25rem;
+  width: clamp(64px, 9vw, 120px);
+  height: auto;
+  filter: drop-shadow(0 0 22px rgb(255 240 205 / .35));
+  pointer-events: none;
+}
+.mond-oberflaeche { transform-origin: 50px 50px; }
+
+/* Sternschnuppen: fliegen von rechts oben nach links unten, Kopf vorn, Schweif hinten.
+   Unterschiedliche Takte, damit es zufällig wirkt. Ohne Animation unsichtbar. */
+.sternschnuppen {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  width: min(70%, 620px);
+  height: 300px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.sternschnuppen span {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #FFF8E6, rgb(255 248 230 / 0));
+  opacity: 0;
+  transform: rotate(-32deg);
+  transform-origin: left center;
+}
+.sternschnuppen span::before {   /* leuchtender Kopf */
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFDF5;
+  box-shadow: 0 0 8px 2px rgb(255 245 215 / .8);
+}
+.sternschnuppen span:nth-child(1) { top: 30px;  right: 4%; }
+.sternschnuppen span:nth-child(2) { top: 110px; right: 30%; width: 90px; }
+.sternschnuppen span:nth-child(3) { top: 10px;  right: 48%; width: 150px; }
+@media (max-width: 480px) {
+  .mond { width: 52px; top: 0; }
+  .feste .section-title { padding-right: 64px; }   /* Platz für den Mond */
+}
+
+@media (max-width: 760px) {
+  /* Handy: Bild füllt den Abschnitt, gleichmäßig abgedunkelt */
+  .feste::before { left: 0; aspect-ratio: auto; -webkit-mask-image: none; mask-image: none; }
+  .feste::after {
+    background:
+      var(--daemmerung-oben),
+      var(--daemmerung-unten),
+      rgb(8 7 18 / .82);
+  }
+}
+
+/* ---------- Sanftes Einblenden beim Scrollen (Klasse setzt main.js) ---------- */
+.reveal { transition: opacity .8s ease, transform .8s ease; }
+.reveal:not(.sichtbar) { opacity: 0; transform: translateY(28px); }
+.mond.reveal { transition-duration: 1.8s; }
+.btn.reveal { transition: opacity .8s ease, transform .8s ease, background .15s, color .15s; }
+.mond.reveal:not(.sichtbar) { transform: translateY(60px); }   /* Mondaufgang */
+
+.event {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.event-featured {
+  grid-column: 1 / -1;
+  border: 2px solid var(--akzent);
+  box-shadow: var(--shadow);
+}
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  aspect-ratio: 1;
+  border: 2px solid var(--marigold);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.1;
+}
+.event-date .day {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--akzent-text);
+  font-variant-numeric: tabular-nums;
+}
+.event-date .month { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.event-bn { font-family: var(--font-display); color: var(--akzent-text); margin: 0; }
+.event h3 { font-size: 1.6rem; margin: .1rem 0 .5rem; }
+.event p { margin: 0; }
+.event.past { opacity: .55; }
+
+.schedule {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .4rem;
+}
+.schedule li {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: .75rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px dashed var(--line);
+}
+.schedule span { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 760px) {
+  .events { grid-template-columns: 1fr; }
+  .event { grid-template-columns: 1fr; gap: .75rem; }
+  .event-date { width: 5rem; }
+  .schedule li { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* ---------- Galerie ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.gallery figure { margin: 0; }
+.gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform .3s;
+}
+@media (hover: hover) {
+  .gallery-item:hover img { transform: scale(1.04); }
+}
+.gallery figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
+
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .gallery { grid-template-columns: 1fr; } }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgb(20 10 10 / .92);
+}
+.lightbox[hidden] { display: none; }
+.lightbox figure { margin: 0; max-width: min(1100px, 100%); }
+.lightbox img {
+  max-height: 80vh;
+  max-height: 80dvh;   /* Handy: berücksichtigt ein-/ausfahrende Browserleiste */
+  margin-inline: auto;
+  border-radius: var(--radius);
+  touch-action: pan-y;
+  user-select: none;
+}
+.lightbox figcaption { color: #F4EAE2; text-align: center; margin-top: .75rem; }
+.lb-close, .lb-nav {
+  background: none;
+  border: 0;
+  color: #F4EAE2;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: .25rem .75rem;
+}
+.lb-close { position: absolute; top: 1rem; right: 1rem; }
+@media (max-width: 600px) {
+  .lb-nav { position: absolute; bottom: 1rem; }
+  .lb-prev { left: 1rem; }
+  .lb-next { right: 1rem; }
+}
+
+/* ---------- Tempel & Karte ---------- */
+.temple { background: var(--surface); border-block: 1px solid var(--line); }
+.temple-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.address-card {
+  font-style: normal;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  padding: 1.5rem 1.5rem 1.4rem;
+  margin: .5rem 0 1.75rem;
+  background: var(--ground);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--akzent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.address-card > * { grid-column: 2; }
+.address-card svg {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-top: .15rem;
+  color: var(--akzent-text);
+}
+.addr-label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.addr-street {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.1rem);
+  line-height: 1.15;
+  margin-top: .15rem;
+}
+.addr-city { font-size: 1.2rem; }
+.addr-name { font-size: .9rem; color: var(--muted); margin-top: .6rem; }
+
+.map {
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  border: 2px solid var(--akzent);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 14px, rgb(228 161 27 / .1) 14px 15px),
+    var(--ground);
+}
+.map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.map-consent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  gap: .25rem;
+}
+.map-consent p { margin: 0 0 .5rem; max-width: 26rem; font-size: .95rem; }
+
+@media (max-width: 760px) {
+  .temple-inner { grid-template-columns: 1fr; }
+  .map { aspect-ratio: 1; }
+}
+
+/* ---------- Kontakt ---------- */
+.contact { max-width: 44rem; }
+.contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  align-items: baseline;
+  margin: .5rem 0;
+}
+.contact-line span {
+  min-width: 5rem;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  font-weight: 600;
+}
+.contact-line a { font-size: 1.15rem; }
+.contact-tech { margin-top: 1.5rem; }
+.contact-tech a { overflow-wrap: anywhere; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--akzent);
+  color: var(--akzent-ink);
+  padding-block: 1.25rem;
+  border-top: 6px double var(--akzent-text);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem 2rem;
+}
+.footer-inner p { margin: 0; }
+.footer-bn { font-family: var(--font-display); font-size: 1.3rem; }
+.site-footer a { color: inherit; }
+.footer-inner .footer-credit {
+  flex-basis: 100%;
+  margin-top: .25rem;
+  padding-top: .6rem;
+  border-top: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+}
+.footer-credit a { text-decoration-thickness: 2px; text-underline-offset: 3px; }

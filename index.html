@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Oishik Roy">
+  <meta name="theme-color" content="#E4A11B">
+  <title>BÖH – Bengalisch-Österreichischer Hinduistischer Kulturverein</title>
+  <meta name="description" content="BÖH – Bengalisch-Österreichischer Hinduistischer Kulturverein – Durga Puja, Lakshmi Puja, Kali Puja, Diwali und bengalische Kultur in unserer Stadt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#start">
+        <picture>
+          <source srcset="images/logo-dunkel.png" media="(prefers-color-scheme: dark)">
+          <img class="brand-logo" src="images/logo.png" width="545" height="200"
+               alt="BÖH – Bengalisch-Österreichischer Hinduistischer Kulturverein">
+        </picture>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#feste" data-i18n="nav.feste">Feste</a>
+        <a href="#galerie" data-i18n="nav.galerie">Galerie</a>
+        <a href="#tempel" data-i18n="nav.tempel">Tempel &amp; Anfahrt</a>
+        <a href="#kontakt" data-i18n="nav.kontakt">Kontakt</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Sprache / Language / ভাষা">
+        <button type="button" data-lang="de" lang="de" aria-pressed="true">DE</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="bn" lang="bn" aria-pressed="false">বাংলা</button>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menü</button>
+    </div>
+  </header>
+
+  <main id="start">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <p class="greeting" lang="bn">শুভ শারদীয়া</p>
+          <h1 data-i18n="hero.title">Durga Puja 2026</h1>
+          <p class="hero-dates" data-i18n="hero.dates">Maha Shashthi bis Bijoya Dashami · 17. – 21. Oktober 2026</p>
+          <p class="lead" data-i18n="hero.lead">
+            Fünf Tage Puja, Anjali, Bhog und Kulturprogramm im Tempel.
+            Familien, Freunde und Gäste sind herzlich willkommen, auch wer das Fest zum ersten Mal erlebt.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#durga-puja" data-i18n="hero.btnProgramm">Programm ansehen</a>
+            <a class="btn btn-ghost" href="#tempel" data-i18n="hero.btnAnfahrt">Anfahrt</a>
+          </div>
+          <p class="countdown" id="countdown" hidden></p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="alpana">
+            <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="100" cy="100" r="92"/>
+              <circle cx="100" cy="100" r="84" stroke-dasharray="2 6"/>
+              <circle cx="100" cy="100" r="46"/>
+            </g>
+            <g id="petal" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M100 54 C 91 44, 92 30, 100 18 C 108 30, 109 44, 100 54 Z"/>
+              <path d="M100 46 C 97 40, 97 34, 100 28 C 103 34, 103 40, 100 46 Z"/>
+            </g>
+            <use href="#petal" transform="rotate(45 100 100)"/>
+            <use href="#petal" transform="rotate(90 100 100)"/>
+            <use href="#petal" transform="rotate(135 100 100)"/>
+            <use href="#petal" transform="rotate(180 100 100)"/>
+            <use href="#petal" transform="rotate(225 100 100)"/>
+            <use href="#petal" transform="rotate(270 100 100)"/>
+            <use href="#petal" transform="rotate(315 100 100)"/>
+          </svg>
+          <!-- Gesicht der Durga: liegt über der Mitte des Rads und dreht sich nicht mit -->
+          <img src="images/durga.svg" class="durga-face" alt="">
+        </div>
+      </div>
+    </section>
+
+    <div class="laal-paar" aria-hidden="true"></div>
+
+    <!-- ============ ÜBER UNS ============ -->
+    <section class="section about">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <h2 class="section-title" data-i18n="about.title">Über uns</h2>
+          <p data-i18n="about.p1">
+            Wir sind eine Gemeinschaft von Familien und Freunde, die ihre Feste, Sprachen
+            und  Traditionen gemeinsam lebendig halten. Im Mittelpunkt steht unser Tempel:
+            ein Ort für Gebete, Geasang, Musik, Tanz, Kinderprogramm und gemeinsamen Essen.
+          </p>
+          <p data-i18n="about.p2">
+            Der Verein ist gemeinnützig und offen für alle, die bengalische Kultur und Glauben kennenlernen möchten.
+          </p>
+        </div>
+        <figure class="about-photo">
+          <img src="images/ueber-uns.jpg" width="1200" height="809" loading="lazy" data-i18n-alt="img.about"
+               alt="Durga Puja im Tempel: Die Gemeinde sitzt vor dem geschmückten Altar mit der Durga-Pratima">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FESTE ============ -->
+    <section class="section feste" id="feste">
+      <div class="wrap">
+        <!-- Mond (wegen des Mondkalenders): nur die Oberfläche dreht sich, Licht und Schatten bleiben -->
+        <svg class="mond" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="mond-schatten" cx=".36" cy=".34" r=".72">
+              <stop offset="0" stop-color="#FFFBEF" stop-opacity=".55"/>
+              <stop offset=".55" stop-color="#FFFFFF" stop-opacity="0"/>
+              <stop offset=".85" stop-color="#3A3350" stop-opacity=".35"/>
+              <stop offset="1" stop-color="#1E1A2E" stop-opacity=".75"/>
+            </radialGradient>
+            <clipPath id="mond-form"><circle cx="50" cy="50" r="46"/></clipPath>
+          </defs>
+          <circle cx="50" cy="50" r="46" fill="#E9DFC4"/>
+          <g clip-path="url(#mond-form)">
+            <g class="mond-oberflaeche" fill="#B8AB8A">
+              <path d="M22 30 C 30 20, 46 22, 48 32 C 50 42, 36 46, 28 42 C 20 39, 17 35, 22 30 Z" opacity=".55"/>
+              <path d="M56 52 C 64 46, 78 50, 78 60 C 78 70, 64 74, 58 68 C 53 63, 51 56, 56 52 Z" opacity=".5"/>
+              <path d="M30 62 C 36 58, 44 62, 42 70 C 40 76, 30 76, 28 70 C 27 66, 27 64, 30 62 Z" opacity=".45"/>
+              <circle cx="66" cy="28" r="6" opacity=".6"/>
+              <circle cx="66" cy="28" r="4.2" fill="#D9CDAE"/>
+              <circle cx="40" cy="52" r="4" opacity=".6"/>
+              <circle cx="40" cy="52" r="2.7" fill="#D9CDAE"/>
+              <circle cx="75" cy="78" r="5" opacity=".55"/>
+              <circle cx="75" cy="78" r="3.4" fill="#D9CDAE"/>
+              <circle cx="18" cy="55" r="3" opacity=".6"/>
+              <circle cx="52" cy="84" r="3.5" opacity=".55"/>
+              <circle cx="84" cy="42" r="2.5" opacity=".6"/>
+              <circle cx="54" cy="16" r="2.2" opacity=".6"/>
+              <circle cx="30" cy="84" r="2" opacity=".5"/>
+            </g>
+          </g>
+          <circle cx="50" cy="50" r="46" fill="url(#mond-schatten)"/>
+        </svg>
+        <!-- Sternschnuppen am Mond vorbei (nur Deko) -->
+        <div class="sternschnuppen" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h2 class="section-title" data-i18n="feste.title">Feste im Jahreskreis</h2>
+        <p class="section-intro" data-i18n="feste.intro">
+          Die Termine richten sich nach dem bengalischen Mondkalender (Panjika).
+          Das genaue Tagesprogramm veröffentlichen wir jeweils einige Wochen vorher.
+        </p>
+
+        <div class="events">
+
+          <article class="event event-featured" id="durga-puja" data-date="2026-10-17">
+            <div class="event-date">
+              <span class="day" data-i18n="date.durga">17.–21.</span>
+              <span class="month" data-i18n="date.okt2026">Okt 2026</span>
+            </div>
+            <div class="event-body">
+              <p class="event-bn" lang="bn">দুর্গা পূজা</p>
+              <h3 data-i18n="ev.durga.h">Durga Puja</h3>
+              <p data-i18n="ev.durga.p">
+                Eines der wichtigsten Feierlichkeiten in der bengalischen Kultur. Wir feiern die Rückkehr von Mutter Durga, mit ganz vielen Gebeten, Gesang und ganz viel Essen. Familien, Freunde und Gäste sind herzlich willkommen.
+              </p>
+              <ul class="schedule">
+                <li data-i18n="sched.1"><span>Sa 17.10.</span> Maha Shashthi · Eröffnung und erster Tag</li>
+                <li data-i18n="sched.2"><span>So 18.10.</span> Maha Saptami ·</li>
+                <li data-i18n="sched.3"><span>Mo 19.10.</span> Maha Ashtami ·</li>
+                <li data-i18n="sched.4"><span>Di 20.10.</span> Maha Navami ·</li>
+                <li data-i18n="sched.5"><span>Mi 21.10.</span> Bijoya Dashami ·</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="event" data-date="2026-10-25">
+            <div class="event-date">
+              <span class="day" data-i18n="date.lakshmi">25.</span>
+              <span class="month" data-i18n="date.okt2026">Okt 2026</span>
+            </div>
+            <div class="event-body">
+              <p class="event-bn" lang="bn">কোজাগরী লক্ষ্মী পূজা</p>
+              <h3 data-i18n="ev.lakshmi.h">Lokhi/Lakshmi Puja</h3>
+              <p data-i18n="ev.lakshmi.p">Hier ehren wir Lakshmi, die Göttin des Wohlstands.</p>
+            </div>
+          </article>
+
+          <article class="event" data-date="2026-11-08">
+            <div class="event-date">
+              <span class="day" data-i18n="date.kali">8.</span>
+              <span class="month" data-i18n="date.nov2026">Nov 2026</span>
+            </div>
+            <div class="event-body">
+              <p class="event-bn" lang="bn">কালী পূজা ও দীপাবলি</p>
+              <h3 data-i18n="ev.kali.h">Kali Puja &amp; Diwali</h3>
+              <p data-i18n="ev.kali.p">Puja für Mutter Kali. Dazu Lichterfest mit Diyas und bengalischem Essen.</p>
+            </div>
+          </article>
+
+          <article class="event" data-date="2027-02-11">
+            <div class="event-date">
+              <span class="day" data-i18n="date.feb">Feb</span>
+              <span class="month" data-i18n="date.2027">2027</span>
+            </div>
+            <div class="event-body">
+              <p class="event-bn" lang="bn">সরস্বতী পূজা</p>
+              <h3 data-i18n="ev.saraswati.h">Saraswati Puja</h3>
+              <p data-i18n="ev.saraswati.p">Zu Saraswati Puja bitten Kinder, Lernende und Studierende die Göttin des Wissens um ihren Segen.</p>
+            </div>
+          </article>
+
+          <article class="event" data-date="2027-04-14">
+            <div class="event-date">
+              <span class="day" data-i18n="date.apr">Apr</span>
+              <span class="month" data-i18n="date.2027">2027</span>
+            </div>
+            <div class="event-body">
+              <p class="event-bn" lang="bn">পহেলা বৈশাখ</p>
+              <h3 data-i18n="ev.boishakh.h">Pohela Boishakh</h3>
+              <p data-i18n="ev.boishakh.p">Bengalisches Neujahr mit Liedern aus dem bengalischen Raum, Tanz und einem großen Festessen.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIE ============
+          -->
+    <section class="section" id="galerie">
+      <div class="wrap">
+        <h2 class="section-title" data-i18n="galerie.title">Galerie</h2>
+        <p class="section-intro" data-i18n="galerie.intro">Eindrücke aus den letzten Jahren. Zum Vergrößern auf ein Bild klicken.</p>
+
+        <div class="gallery">
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-durga-puja.jpg" width="1600" height="1200" data-i18n-alt="img.1" alt="Durga-Pratima im geschmückten Pandal" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.1">Durga Puja 2025 · Pandal/Altar </figcaption>
+          </figure>
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-sindoor-khela.jpg" width="1543" height="921" data-i18n-alt="img.2" alt="Frauen beim Sindoor Khela" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.2">Sindoor Khela an Bijoya Dashami</figcaption>
+          </figure>
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-diwali.jpg" width="1536" height="775" data-i18n-alt="img.3" alt="Teelichter in Form eines Om auf einem Messingteller zu Diwali" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.3">Kali Puja/Diwali · Diyas, Gebete und Essen</figcaption>
+          </figure>
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-kulturabend.jpg" width="1536" height="2048" data-i18n-alt="img.4" alt="Kinder beim Fest" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.4">Kulturabend · Kindertanz und Gesang</figcaption>
+          </figure>
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-kali-puja.jpg" width="900" height="1600" data-i18n-alt="img.5" alt="Der Priester bei der Puja vor der Kali-Pratima" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.5">Kali Puja</figcaption>
+          </figure>
+          <figure>
+            <button class="gallery-item" type="button">
+              <img src="images/galerie-bhog.jpg" width="725" height="420" data-i18n-alt="img.6" alt="Puja-Essen" loading="lazy">
+            </button>
+            <figcaption data-i18n="cap.6">Puja Essen</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEMPEL & ANFAHRT ============ -->
+    <section class="section temple" id="tempel">
+      <div class="wrap temple-inner">
+        <div class="temple-info">
+          <h2 class="section-title" data-i18n="tempel.title">Tempel &amp; Anfahrt</h2>
+          <address class="address-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="2.6" fill="currentColor"/>
+            </svg>
+            <span class="addr-label" data-i18n="tempel.adresse">Adresse</span>
+            <span class="addr-street">Herbststraße 54</span>
+            <span class="addr-city">1160 Wien, Österreich</span>
+            <span class="addr-name">Bengalisch-Österreichischer Hinduistischer Kulturverein</span>
+          </address>
+          <a class="btn btn-ghost" id="route-link" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/dir/?api=1&amp;destination=Herbststra%C3%9Fe%2054%2C%201160%20Wien%2C%20%C3%96sterreich" data-i18n="tempel.route">Route planen</a>
+        </div>
+
+        <!-- Google Maps wird erst nach Klick geladen (DSGVO: keine Daten an Google ohne Einwilligung).
+             Adresse in data-address anpassen. -->
+        <div class="map" id="map" data-address="Herbststraße 54, 1160 Wien, Österreich">
+          <div class="map-consent">
+            <p><strong data-i18n="map.title">Karte anzeigen</strong></p>
+            <p data-i18n="map.text">Beim Laden der Karte werden Daten an Google übertragen. Mehr dazu in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <button class="btn btn-primary" type="button" id="map-load" data-i18n="map.btn">Google Maps laden</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="laal-paar" aria-hidden="true"></div>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section" id="kontakt">
+      <div class="wrap contact">
+        <h2 class="section-title" data-i18n="kontakt.title">Kontakt</h2>
+        <p data-i18n="kontakt.text">Fragen zu Festen, Kooperationen, Sponsoring oder Spenden? Schreiben Sie uns gerne.</p>
+        <p class="contact-line">
+          <span data-i18n="kontakt.email">E-Mail</span>
+          <a href="mailto:hindu@kulturverein.com">hindu@kulturverein.com</a>
+        </p>
+        <p class="contact-tech">
+          <span data-i18n="kontakt.tech">Für technische Fragen bezüglich Website und Infrastruktur bitte unter folgender E-Mail kontaktieren:</span>
+          <a href="mailto:royoishik@yahoo.com">royoishik@yahoo.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p lang="bn" class="footer-bn">সবাইকে শুভেচ্ছা</p>
+      <p>© <span id="year">2026</span> <span data-i18n="brand.name">Bengalisch-Österreichischer Hinduistischer Kulturverein</span></p>
+      <p><a href="impressum.html" data-i18n="footer.impressum">Impressum</a> · <a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutz</a></p>
+      <p class="footer-credit">Built &amp; Maintained by <a href="mailto:royoishik@yahoo.com">Oishik Roy</a></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox für die Galerie -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" type="button" id="lb-close" aria-label="Schließen">×</button>
+    <button class="lb-nav lb-prev" type="button" id="lb-prev" aria-label="Vorheriges Bild">‹</button>
+    <figure>
+      <img id="lb-img" src="" alt="">
+      <figcaption id="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" type="button" id="lb-next" aria-label="Nächstes Bild">›</button>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
