@@ -295,6 +295,13 @@ html[lang="bn"] body { line-height: 1.75; }
   .sternschnuppen span:nth-child(1) { animation: sternschnuppe 4s ease-in 1s infinite; }
   .sternschnuppen span:nth-child(2) { animation: sternschnuppe 5.5s ease-in 2.5s infinite; }
   .sternschnuppen span:nth-child(3) { animation: sternschnuppe 7s ease-in 4s infinite; }
+  .sternschnuppen span:nth-child(4) { animation: sternschnuppe 6.3s ease-in 3.2s infinite; }
+  .sternschnuppen span:nth-child(5) { animation: sternschnuppe 8.5s ease-in 5.5s infinite; }
+  .sternschnuppen span:nth-child(6) { animation: sternschnuppe 4.7s ease-in 0.3s infinite; }
+  .sternschnuppen span:nth-child(7) { animation: sternschnuppe 9.2s ease-in 6.8s infinite; }
+  .sternschnuppen span:nth-child(8) { animation: sternschnuppe 7.7s ease-in 1.8s infinite; }
+  .sternschnuppen span:nth-child(9) { animation: sternschnuppe 10.4s ease-in 7.5s infinite; }
+  .sternschnuppen span:nth-child(10) { animation: sternschnuppe 5.9s ease-in 4.6s infinite; }
   @keyframes sternschnuppe {
     0%   { opacity: 0; transform: rotate(-32deg) translateX(0); }
     3%   { opacity: 1; }
@@ -454,6 +461,13 @@ html[lang="bn"] body { line-height: 1.75; }
 .sternschnuppen span:nth-child(1) { top: 30px;  right: 4%; }
 .sternschnuppen span:nth-child(2) { top: 110px; right: 30%; width: 90px; }
 .sternschnuppen span:nth-child(3) { top: 10px;  right: 48%; width: 150px; }
+.sternschnuppen span:nth-child(4) { top: 70px;  right: 62%; width: 100px; }
+.sternschnuppen span:nth-child(5) { top: 160px; right: 12%; width: 80px; }
+.sternschnuppen span:nth-child(6) { top: 50px;  right: 20%; width: 130px; }
+.sternschnuppen span:nth-child(7) { top: 130px; right: 75%; width: 70px; }
+.sternschnuppen span:nth-child(8) { top: 90px;  right: 40%; width: 110px; }
+.sternschnuppen span:nth-child(9) { top: 20px;  right: 85%; width: 90px; }
+.sternschnuppen span:nth-child(10) { top: 190px; right: 52%; width: 120px; }
 @media (max-width: 480px) {
   .mond { width: 52px; top: 0; }
   .feste .section-title { padding-right: 64px; }   /* Platz für den Mond */
