@@ -758,6 +758,34 @@ html[lang="bn"] body { line-height: 1.75; }
   .map { aspect-ratio: 1; }
 }
 
+/* ---------- Sponsoren ---------- */
+.sponsors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+  width: min(100%, 18rem);
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.sponsor img { width: 100%; max-width: 12rem; height: auto; }
+.sponsor-name { font-weight: 600; text-align: center; }
+.sponsor-werden { margin-top: 3rem; }
+/* Sponsoren-Bereich mittig: Überschrift, Text und Kacheln */
+.sponsoren-mitte { text-align: center; }
+.sponsoren-mitte .section-intro { margin-inline: auto; }
+.sponsoren-mitte .sponsors { justify-content: center; }
+
 /* ---------- Kontakt ---------- */
 .contact { max-width: 44rem; }
 .contact-line {

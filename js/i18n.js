@@ -15,6 +15,7 @@ const TRANSLATIONS = {
     'nav.galerie': 'Gallery',
     'nav.tempel': 'Temple &amp; directions',
     'nav.kontakt': 'Contact',
+    'nav.sponsoren': 'Sponsors',
     'nav.menu': 'Menu',
 
     'hero.title': 'Durga Puja 2026',
@@ -82,6 +83,10 @@ const TRANSLATIONS = {
     'map.text': 'Loading the map sends data to Google. See our <a href="datenschutz.html">privacy policy</a> for details.',
     'map.btn': 'Load Google Maps',
 
+    'sponsoren.title': 'Our sponsors',
+    'sponsoren.text': 'Many thanks to our sponsors for their support!',
+    'sponsor.ruposhi': 'Ruposhi Bangla Supermarket',
+
     'kontakt.title': 'Contact',
     'kontakt.text': 'Questions about festivals, partnerships, sponsorship or donations? Feel free to write to us.',
     'kontakt.email': 'Email',
@@ -110,6 +115,10 @@ const TRANSLATIONS = {
     'imp.zweck.p': 'Non-profit preservation and promotion of Bengali culture and Hindu tradition in Austria, in particular through religious festivals, cultural and children’s programmes.',
     'imp.richtung.h': 'Basic orientation of the website:',
     'imp.richtung.p': 'Information about the association, its festivals and events.',
+    'sp.pagetitle': 'Sponsors · Bengali-Austrian Hindu Cultural Association',
+    'sp.intro': 'Our festivals and events are only possible thanks to the support of our sponsors. Many thanks to everyone who supports our association!',
+    'sp.mitmachen.h': 'Become a sponsor',
+    'sp.mitmachen.p': 'Would you like to support our association as well? Feel free to write to us:',
     'ds.pagetitle': 'Privacy · Bengali-Austrian Hindu Cultural Association',
     'ds.title': 'Privacy policy',
     'ds.verantwortlich.h': 'Controller',
@@ -131,6 +140,7 @@ const TRANSLATIONS = {
     'nav.galerie': 'গ্যালারি',
     'nav.tempel': 'মন্দির ও পথনির্দেশ',
     'nav.kontakt': 'যোগাযোগ',
+    'nav.sponsoren': 'পৃষ্ঠপোষক',
     'nav.menu': 'মেনু',
 
     'hero.title': 'দুর্গা পূজা ২০২৬',
@@ -198,6 +208,10 @@ const TRANSLATIONS = {
     'map.text': 'মানচিত্র লোড করলে তথ্য Google-এর কাছে যায়। বিস্তারিত আমাদের <a href="datenschutz.html">গোপনীয়তা নীতিতে</a>।',
     'map.btn': 'Google Maps লোড করুন',
 
+    'sponsoren.title': 'আমাদের পৃষ্ঠপোষক',
+    'sponsoren.text': 'সহযোগিতার জন্য আমাদের পৃষ্ঠপোষকদের আন্তরিক ধন্যবাদ!',
+    'sponsor.ruposhi': 'রূপসী বাংলা সুপারমার্কেট',
+
     'kontakt.title': 'যোগাযোগ',
     'kontakt.text': 'উৎসব, সহযোগিতা, স্পনসরশিপ বা দান নিয়ে কোনো প্রশ্ন? নির্দ্বিধায় আমাদের লিখুন।',
     'kontakt.email': 'ই-মেল',
@@ -226,6 +240,10 @@ const TRANSLATIONS = {
     'imp.zweck.p': 'অস্ট্রিয়ায় বাঙালি সংস্কৃতি ও হিন্দু ঐতিহ্যের অলাভজনক চর্চা ও প্রসার, বিশেষত ধর্মীয় উৎসব, সাংস্কৃতিক ও ছোটদের অনুষ্ঠানের মাধ্যমে।',
     'imp.richtung.h': 'ওয়েবসাইটের মূল উদ্দেশ্য:',
     'imp.richtung.p': 'সমিতি, এর উৎসব ও অনুষ্ঠান সম্পর্কে তথ্য।',
+    'sp.pagetitle': 'পৃষ্ঠপোষক · বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি',
+    'sp.intro': 'আমাদের পৃষ্ঠপোষকদের সহযোগিতা ছাড়া আমাদের উৎসব ও অনুষ্ঠান সম্ভব হতো না। যাঁরা আমাদের সমিতির পাশে আছেন, তাঁদের সবাইকে আন্তরিক ধন্যবাদ!',
+    'sp.mitmachen.h': 'পৃষ্ঠপোষক হোন',
+    'sp.mitmachen.p': 'আপনিও কি আমাদের সমিতির পাশে দাঁড়াতে চান? নির্দ্বিধায় আমাদের লিখুন:',
     'ds.pagetitle': 'গোপনীয়তা নীতি · বাঙালি-অস্ট্রীয় হিন্দু সাংস্কৃতিক সমিতি',
     'ds.title': 'গোপনীয়তা নীতি',
     'ds.verantwortlich.h': 'দায়িত্বপ্রাপ্ত সংস্থা',

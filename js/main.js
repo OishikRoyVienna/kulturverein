@@ -128,6 +128,7 @@ const revealEls = [...document.querySelectorAll([
   '.mond', '.event',
   '.gallery figure',
   '.address-card', '#route-link', '.map',
+  '.sponsor',
   '.contact > p',
 ].join(', '))];
 if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
