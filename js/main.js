@@ -24,9 +24,11 @@ today.setHours(0, 0, 0, 0);
 const events = [...document.querySelectorAll('.event[data-date]')];
 let next = null;
 
+// Mehrtägige Feste haben zusätzlich data-end und gelten erst danach als vorbei
 events.forEach((event) => {
   const date = new Date(event.dataset.date + 'T00:00:00');
-  if (date < today) {
+  const end = event.dataset.end ? new Date(event.dataset.end + 'T00:00:00') : date;
+  if (end < today) {
     event.classList.add('past');
   } else if (!next || date < next.date) {
     next = { date, el: event };
@@ -39,7 +41,17 @@ function renderCountdown() {
   if (!next) return;
   const days = Math.round((next.date - today) / 86400000);
   const name = next.el.querySelector('h3').textContent;
-  countdown.innerHTML = days === 0
+  // Während des Fests: Name des heutigen Tages aus dem Programm, z. B. „Maha Ashtami“
+  const tag = days <= 0 && next.el.querySelectorAll('.schedule li')[-days];
+  if (tag) {
+    const zeile = tag.cloneNode(true);
+    zeile.querySelector('span')?.remove();
+    countdown.innerHTML = I18N.t('countdown.festtag')
+      .replace('{tag}', zeile.textContent.split('·')[0].trim());
+    countdown.hidden = false;
+    return;
+  }
+  countdown.innerHTML = days <= 0
     ? I18N.t('countdown.today').replace('{name}', name)
     : I18N.t('countdown.days')
         .replace('{n}', I18N.num(days))

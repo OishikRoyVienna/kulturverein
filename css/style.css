@@ -18,9 +18,7 @@
   --shadow: 0 1px 2px rgb(43 22 20 / .06), 0 8px 24px rgb(43 22 20 / .08);
 
   --font-display: "Tiro Bangla", "Noto Serif Bengali", Georgia, serif;
-  /* Noto Sans Bengali wird nur mit den Ziffern ০–৯ geladen: Die ১ von Hind Siliguri
-     ist kaum von der ৬ zu unterscheiden. Alle anderen Zeichen kommen aus Hind Siliguri. */
-  --font-body: "Noto Sans Bengali", "Hind Siliguri", system-ui, sans-serif;
+  --font-body: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
 
   --radius: 6px;
   color-scheme: light;
@@ -149,6 +147,9 @@ h1, h2, h3 {
 /* Auf Bengalisch steht der Festname schon in der Überschrift */
 html[lang="bn"] .event-bn { display: none; }
 html[lang="bn"] body { line-height: 1.75; }
+/* Bengalischer Fließtext in Noto Sans Bengali: In Hind Siliguri ist die ১
+   kaum von der ৬ zu unterscheiden. */
+html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
 .nav a {
   color: var(--ink);
   text-decoration: none;

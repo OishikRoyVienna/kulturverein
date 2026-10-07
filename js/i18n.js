@@ -92,6 +92,7 @@ const TRANSLATIONS = {
     'footer.datenschutz': 'Privacy',
 
     'countdown.today': '<strong>Today</strong>: {name}',
+    'countdown.festtag': 'Today is <strong>{tag}</strong>',
     'countdown.days': '<strong>{n} {unit}</strong> to go until {name}',
     'countdown.day': 'day',
     'countdown.dayPlural': 'days',
@@ -209,6 +210,7 @@ const TRANSLATIONS = {
     'footer.datenschutz': 'গোপনীয়তা নীতি',
 
     'countdown.today': '<strong>আজ</strong>: {name}',
+    'countdown.festtag': 'আজ <strong>{tag}</strong>',
     'countdown.days': '{name} আর <strong>{n} {unit}</strong> বাকি',
     'countdown.day': 'দিন',
     'countdown.dayPlural': 'দিন',
@@ -246,6 +248,7 @@ const TRANSLATIONS = {
 // Deutsch (Standard) für den Countdown; der Rest kommt aus dem HTML
 const GERMAN_EXTRA = {
   'countdown.today': '<strong>Heute</strong>: {name}',
+  'countdown.festtag': 'Heute ist <strong>{tag}</strong>',
   'countdown.days': 'Noch <strong>{n} {unit}</strong> bis {name}',
   'countdown.day': 'Tag',
   'countdown.dayPlural': 'Tage',
