@@ -591,6 +591,8 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
 .event-bn { font-family: var(--font-display); color: var(--akzent-text); margin: 0; }
 .event h3 { font-size: 1.6rem; margin: .1rem 0 .5rem; }
 .event p { margin: 0; }
+.event .event-info { margin-top: .6rem; }   /* Uhrzeit und Ort */
+.event-info a { white-space: nowrap; }      /* Adresse nicht umbrechen */
 .event.past { opacity: .55; }
 
 .schedule {
