@@ -243,15 +243,15 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   color: var(--ink);
   background:
     linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 50%, rgb(20 8 8 / .45) 100%),
-    /* vergrößert und rechtsbündig, damit die Figur links steht und nicht hinter dem Rad */
-    url("../images/hero-durga.jpg") right 10% / 140% auto no-repeat,
+    /* Kali links, Lakshmi rechts (ein gemeinsames Bild) */
+    url("../images/hero-lakshmi-kali.jpg?v=3") center 25% / cover no-repeat,
     #2A0E0E;
 }
 @media (max-width: 760px) {
   .hero {
-    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-durga.jpg");
+    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-lakshmi.jpg");
     background-size: auto, cover;
-    background-position: center, center 30%;
+    background-position: center, center 20%;
   }
 }
 .hero-inner {
