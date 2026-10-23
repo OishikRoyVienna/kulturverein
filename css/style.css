@@ -811,3 +811,106 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   letter-spacing: .03em;
 }
 .footer-credit a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+/* ---------- Durga Puja 2026 Rewind (Karussell) ----------
+   Dunkel wie der Hero, immer helle Schrift. Die Bilder liegen nebeneinander,
+   das nächste schaut rechts heraus; Wischen oder Pfeile blättern. */
+.rewind {
+  --ink: #F7EEE6;
+  --muted: #E3D2C8;
+  --akzent-text: #F0B63E;
+  --akzent-ink: #1A1011;
+  color: var(--ink);
+  background: #1F0B0C;
+  overflow: hidden;
+}
+.rw-track {
+  list-style: none;
+  margin: 0 -1.25rem;
+  padding: 0 1.25rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(82%, 52rem);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1.25rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.rw-track::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { .rw-track { scroll-behavior: auto; } }
+.rw-slide {
+  position: relative;
+  scroll-snap-align: start;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #2A0E0E;
+  transition: opacity .4s;
+}
+.rw-slide:not(.aktiv) { opacity: .45; }
+.rw-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+/* Untertitel unten im Bild auf weichem Verlauf */
+.rw-cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  margin: 0;
+  padding: 3rem 1.25rem 1rem;
+  background: linear-gradient(transparent, rgb(20 8 8 / .88));
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+.rw-cap strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--akzent-text);
+}
+.rw-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.rw-btn {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 1.6rem;
+  line-height: 1;
+  border-radius: 50%;
+  border: 2px solid var(--akzent-text);
+  background: transparent;
+  color: var(--akzent-text);
+  cursor: pointer;
+}
+@media (hover: hover) { .rw-btn:hover { background: var(--akzent-text); color: var(--akzent-ink); } }
+.rw-btn:disabled { opacity: .35; cursor: default; pointer-events: none; }
+.rw-dots { display: flex; gap: .4rem; flex-wrap: wrap; }
+.rw-dots button {
+  width: 28px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: rgb(255 255 255 / .25);
+  cursor: pointer;
+  transition: background .2s, width .2s;
+}
+.rw-dots button[aria-current="true"] { background: var(--akzent-text); width: 44px; }
+.rw-count { margin-left: auto; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .rw-track { grid-auto-columns: 88%; gap: .75rem; }
+  .rw-slide img { aspect-ratio: 4 / 5; }   /* Handy: Hochformat wie Stories */
+  .rw-cap strong { font-size: 1.3rem; }
+  .rw-dots button { width: 18px; }
+  .rw-dots button[aria-current="true"] { width: 30px; }
+}

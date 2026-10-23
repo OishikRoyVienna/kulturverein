@@ -123,6 +123,21 @@ const TRANSLATIONS = {
     'ds.fotos.p': 'The people in the gallery photos have consented to their publication. If you would like a picture removed, please write to us.',
     'ds.rechte.h': 'Your rights',
     'ds.rechte.p': 'You have the right to access, rectification, erasure, restriction of processing, objection and to lodge a complaint with a supervisory authority.',
+
+    'rw.title': 'Durga Puja 2026 Rewind',
+    'rw.intro': 'Five days, 17–21 October: thank you to everyone who celebrated and helped.',
+    'rw.label': 'Pictures from Durga Puja 2026',
+    'rw.dot': 'Picture {n}',
+    'rw.cap.1': '<strong>Maha Shashthi</strong> · With the Bodhon we welcome Ma Durga',
+    'rw.cap.2': '<strong>Maha Saptami</strong> · Puja, singing and the first bhog',
+    'rw.cap.3': '<strong>Maha Ashtami</strong> · Pushpanjali and bhog for everyone',
+    'rw.cap.4': '<strong>Maha Navami</strong> · Dance and song at the cultural evening',
+    'rw.cap.5': '<strong>Bijoya Dashami</strong> · Sindoor Khela and farewell until next year',
+    'rw.alt.1': 'Durga pratima decorated with flowers',
+    'rw.alt.2': 'Durga pratima in the decorated pandal',
+    'rw.alt.3': 'Puja food',
+    'rw.alt.4': 'Children in traditional clothing before their performance at the cultural evening',
+    'rw.alt.5': 'Women at Sindoor Khela',
   },
 
   bn: {
@@ -240,6 +255,21 @@ const TRANSLATIONS = {
     'ds.fotos.p': 'গ্যালারির ছবিতে থাকা ব্যক্তিরা ছবি প্রকাশে সম্মতি দিয়েছেন। কোনো ছবি সরিয়ে ফেলতে চাইলে আমাদের লিখুন।',
     'ds.rechte.h': 'আপনার অধিকার',
     'ds.rechte.p': 'আপনার তথ্য জানার, সংশোধনের, মুছে ফেলার, প্রক্রিয়াকরণ সীমিত করার, আপত্তি জানানোর এবং তত্ত্বাবধায়ক কর্তৃপক্ষের কাছে অভিযোগ করার অধিকার আছে।',
+
+    'rw.title': 'ফিরে দেখা: দুর্গা পূজা ২০২৬',
+    'rw.intro': 'পাঁচ দিন, ১৭–২১ অক্টোবর: যাঁরা উৎসবে যোগ দিয়েছেন ও সাহায্য করেছেন, সবাইকে ধন্যবাদ।',
+    'rw.label': 'দুর্গা পূজা ২০২৬-এর ছবি',
+    'rw.dot': 'ছবি {n}',
+    'rw.cap.1': '<strong>মহা ষষ্ঠী</strong> · বোধনের মধ্য দিয়ে মা দুর্গাকে বরণ',
+    'rw.cap.2': '<strong>মহা সপ্তমী</strong> · পূজা, গান আর প্রথম ভোগ',
+    'rw.cap.3': '<strong>মহা অষ্টমী</strong> · পুষ্পাঞ্জলি আর সবার জন্য ভোগ',
+    'rw.cap.4': '<strong>মহা নবমী</strong> · সাংস্কৃতিক সন্ধ্যায় নাচ ও গান',
+    'rw.cap.5': '<strong>বিজয়া দশমী</strong> · সিঁদুর খেলা, আসছে বছর আবার হবে',
+    'rw.alt.1': 'ফুলে সাজানো দুর্গা প্রতিমা',
+    'rw.alt.2': 'সাজানো প্যান্ডেলে দুর্গা প্রতিমা',
+    'rw.alt.3': 'পূজার ভোগ',
+    'rw.alt.4': 'সাংস্কৃতিক সন্ধ্যায় অনুষ্ঠানের আগে ঐতিহ্যবাহী পোশাকে শিশুরা',
+    'rw.alt.5': 'সিঁদুর খেলায় মহিলারা',
   },
 };
 
@@ -250,6 +280,7 @@ const GERMAN_EXTRA = {
   'countdown.days': 'Noch <strong>{n} {unit}</strong> bis {name}',
   'countdown.day': 'Tag',
   'countdown.dayPlural': 'Tage',
+  'rw.dot': 'Bild {n}',
 };
 
 const I18N = (() => {

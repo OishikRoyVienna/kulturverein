@@ -132,6 +132,56 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') show(current + 1);
 });
 
+// ---------- Rewind-Karussell ----------
+// Blättern per Wischen (Scroll-Snap), Pfeilen, Punkten oder Pfeiltasten.
+const rwTrack = document.getElementById('rw-track');
+if (rwTrack) {
+  const slides = [...rwTrack.children];
+  const rwPrev = document.getElementById('rw-prev');
+  const rwNext = document.getElementById('rw-next');
+  const rwCount = document.getElementById('rw-count');
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.addEventListener('click', () => goTo(i));
+    return dot;
+  });
+  document.getElementById('rw-dots').append(...dots);
+  let active = 0;
+
+  function goTo(i) {
+    i = Math.max(0, Math.min(i, slides.length - 1));
+    rwTrack.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft });
+  }
+
+  function update() {
+    // Aktiv ist das Bild, das am nächsten am linken Rand liegt; ganz rechts immer das letzte
+    const x = rwTrack.scrollLeft;
+    const atEnd = x >= rwTrack.scrollWidth - rwTrack.clientWidth - 2;
+    active = atEnd ? slides.length - 1 : slides.reduce((best, s, i) =>
+      Math.abs(s.offsetLeft - slides[0].offsetLeft - x) <
+      Math.abs(slides[best].offsetLeft - slides[0].offsetLeft - x) ? i : best, 0);
+    slides.forEach((s, i) => s.classList.toggle('aktiv', i === active));
+    dots.forEach((d, i) => {
+      d.setAttribute('aria-current', i === active);
+      d.setAttribute('aria-label', I18N.t('rw.dot').replace('{n}', I18N.num(i + 1)));
+    });
+    rwCount.textContent = `${I18N.num(active + 1)} / ${I18N.num(slides.length)}`;
+    rwPrev.disabled = active === 0;
+    rwNext.disabled = active === slides.length - 1;
+  }
+
+  rwPrev.addEventListener('click', () => goTo(active - 1));
+  rwNext.addEventListener('click', () => goTo(active + 1));
+  rwTrack.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  rwTrack.closest('.rw').addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(active - 1);
+    if (e.key === 'ArrowRight') goTo(active + 1);
+  });
+  window.addEventListener('resize', update);
+  document.addEventListener('sprachwechsel', update);
+}
+
 // ---------- Abschnitte sanft einblenden, sobald sie ins Bild scrollen ----------
 // Ohne JavaScript oder bei „Bewegung reduzieren“ ist alles sofort sichtbar.
 const revealEls = [...document.querySelectorAll([
