@@ -242,9 +242,8 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   --akzent-ink: #1A1011;
   color: var(--ink);
   background:
-    linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 50%, rgb(20 8 8 / .45) 100%),
-    /* Kali links, Lakshmi rechts (ein gemeinsames Bild) */
-    url("../images/hero-lakshmi-kali.jpg?v=3") center 25% / cover no-repeat,
+    linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 35%, rgb(20 8 8 / .45) 85%),
+    url("../images/hero-lakshmi.jpg") center 25% / cover no-repeat,
     #2A0E0E;
 }
 @media (max-width: 760px) {
