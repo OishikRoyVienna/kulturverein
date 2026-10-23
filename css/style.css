@@ -813,8 +813,8 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
 .footer-credit a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
 /* ---------- Durga Puja 2026 Rewind (Karussell) ----------
-   Dunkel wie der Hero, immer helle Schrift. Die Bilder liegen nebeneinander,
-   das nächste schaut rechts heraus; Wischen oder Pfeile blättern. */
+   Dunkel wie der Hero, immer helle Schrift. Hochformat-Karten nebeneinander,
+   die nächste schaut rechts heraus; Wischen oder Pfeile blättern. */
 .rewind {
   --ink: #F7EEE6;
   --muted: #E3D2C8;
@@ -830,7 +830,7 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   padding: 0 1.25rem;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min(82%, 52rem);
+  grid-auto-columns: min(82%, 25rem);
   gap: 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -847,13 +847,11 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   border-radius: 14px;
   overflow: hidden;
   background: #2A0E0E;
-  transition: opacity .4s;
 }
-.rw-slide:not(.aktiv) { opacity: .45; }
 .rw-slide img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 /* Untertitel unten im Bild auf weichem Verlauf */
@@ -908,8 +906,7 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
 .rw-dots button[aria-current="true"] { background: var(--akzent-text); width: 44px; }
 .rw-count { margin-left: auto; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 @media (max-width: 600px) {
-  .rw-track { grid-auto-columns: 88%; gap: .75rem; }
-  .rw-slide img { aspect-ratio: 4 / 5; }   /* Handy: Hochformat wie Stories */
+  .rw-track { grid-auto-columns: 84%; gap: .75rem; }
   .rw-cap strong { font-size: 1.3rem; }
   .rw-dots button { width: 18px; }
   .rw-dots button[aria-current="true"] { width: 30px; }
