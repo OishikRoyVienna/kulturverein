@@ -134,6 +134,10 @@ const TRANSLATIONS = {
     'rw.alt.1': 'Pandal with Durga, Lakshmi and Ganesha, in front the hom fire and plates of bhog',
     'rw.alt.2': 'The priest pours ghee into the hom fire, behind it fruit and bhog',
     'rw.alt.3': 'A woman in a red and white sari bids farewell to the Durga pratima at Debi Boron',
+    'rw.cap.4': '<strong>Arati</strong> · Prayer and light before Ma Durga and her family',
+    'rw.cap.5': '<strong>Celebrating together</strong> · Dancing and laughter before Ma Durga',
+    'rw.alt.4': 'A young man in a blue kurta performing arati before Durga, Lakshmi, Saraswati, Ganesha and Kartik',
+    'rw.alt.5': 'Women in festive saris dancing and laughing before the Durga pratima',
   },
 
   bn: {
@@ -262,6 +266,10 @@ const TRANSLATIONS = {
     'rw.alt.1': 'দুর্গা, লক্ষ্মী ও গণেশের মণ্ডপ, সামনে হোমের আগুন ও ভোগের থালা',
     'rw.alt.2': 'পুরোহিত হোমের আগুনে ঘি দিচ্ছেন, পিছনে ফল ও ভোগ',
     'rw.alt.3': 'লাল-সাদা শাড়িতে এক মহিলা দেবী বরণে মা দুর্গাকে বিদায় জানাচ্ছেন',
+    'rw.cap.4': '<strong>আরতি</strong> · সপরিবারে মা দুর্গার সামনে প্রার্থনা ও আলো',
+    'rw.cap.5': '<strong>একসাথে উৎসব</strong> · মায়ের সামনে নাচ আর হাসি',
+    'rw.alt.4': 'নীল পাঞ্জাবিতে এক যুবক দুর্গা, লক্ষ্মী, সরস্বতী, গণেশ ও কার্তিকের সামনে আরতি করছেন',
+    'rw.alt.5': 'উৎসবের শাড়িতে মহিলারা দুর্গা প্রতিমার সামনে হাসিমুখে নাচছেন',
   },
 };
 
