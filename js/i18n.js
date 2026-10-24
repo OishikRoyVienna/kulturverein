@@ -138,6 +138,8 @@ const TRANSLATIONS = {
     'rw.cap.5': '<strong>Celebrating together</strong> · Dancing and laughter before Ma Durga',
     'rw.alt.4': 'A young man in a blue kurta performing arati before Durga, Lakshmi, Saraswati, Ganesha and Kartik',
     'rw.alt.5': 'Women in festive saris dancing and laughing before the Durga pratima',
+    'rw.cap.6': '<strong>Community</strong> · Festive clothes and good spirits',
+    'rw.alt.6': 'A young man in a golden kurta laughing into the camera, surrounded by other guests in festive clothes',
   },
 
   bn: {
@@ -270,6 +272,8 @@ const TRANSLATIONS = {
     'rw.cap.5': '<strong>একসাথে উৎসব</strong> · মায়ের সামনে নাচ আর হাসি',
     'rw.alt.4': 'নীল পাঞ্জাবিতে এক যুবক দুর্গা, লক্ষ্মী, সরস্বতী, গণেশ ও কার্তিকের সামনে আরতি করছেন',
     'rw.alt.5': 'উৎসবের শাড়িতে মহিলারা দুর্গা প্রতিমার সামনে হাসিমুখে নাচছেন',
+    'rw.cap.6': '<strong>আমরা সবাই</strong> · উৎসবের সাজ আর খুশির মেজাজ',
+    'rw.alt.6': 'সোনালি পাঞ্জাবিতে এক যুবক ক্যামেরার দিকে হাসছেন, চারপাশে উৎসবের পোশাকে আরও অতিথি',
   },
 };
 
