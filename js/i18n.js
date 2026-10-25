@@ -140,6 +140,8 @@ const TRANSLATIONS = {
     'rw.alt.5': 'Women in festive saris dancing and laughing before the Durga pratima',
     'rw.cap.6': '<strong>Community</strong> · Coming together in good spirits',
     'rw.alt.6': 'A young man in a golden kurta laughing into the camera, surrounded by other guests in festive clothes',
+    'rw.cap.7': '<strong>Dhak</strong> · The sound of the puja',
+    'rw.alt.7': 'A man in a dark blue kurta playing the dhak before the Durga pratima',
   },
 
   bn: {
@@ -274,6 +276,8 @@ const TRANSLATIONS = {
     'rw.alt.5': 'উৎসবের শাড়িতে মহিলারা দুর্গা প্রতিমার সামনে হাসিমুখে নাচছেন',
     'rw.cap.6': '<strong>আমরা সবাই</strong> · একসাথে মিলন আর খুশির মেজাজ',
     'rw.alt.6': 'সোনালি পাঞ্জাবিতে এক যুবক ক্যামেরার দিকে হাসছেন, চারপাশে উৎসবের পোশাকে আরও অতিথি',
+    'rw.cap.7': '<strong>ঢাক</strong> · পূজার সুর',
+    'rw.alt.7': 'গাঢ় নীল পাঞ্জাবিতে একজন দুর্গা প্রতিমার সামনে ঢাক বাজাচ্ছেন',
   },
 };
 
