@@ -243,14 +243,15 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   color: var(--ink);
   background:
     linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 35%, rgb(20 8 8 / .45) 85%),
-    url("../images/hero-lakshmi.jpg") center 25% / cover no-repeat,
+    /* Kali Puja: Kali im Tempel mit Diyas und Feuerwerk */
+    url("../images/hero-kali.jpg?v=4") center 30% / cover no-repeat,
     #2A0E0E;
 }
 @media (max-width: 760px) {
   .hero {
-    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-lakshmi.jpg");
+    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-kali.jpg?v=4");
     background-size: auto, cover;
-    background-position: center, center 20%;
+    background-position: center, 66% 20%;   /* Kali steht im Bild rechts der Mitte */
   }
 }
 .hero-inner {
@@ -862,6 +863,18 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   background: linear-gradient(transparent, rgb(20 8 8 / .88));
   font-size: 1.05rem;
   line-height: 1.4;
+}
+/* Fotografen-Angabe oben rechts im Bild */
+.rw-foto {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  margin: 0;
+  padding: .2rem .65rem;
+  font-size: .8rem;
+  color: #F7EEE6;
+  background: rgb(20 8 8 / .6);
+  border-radius: 999px;
 }
 .rw-cap strong {
   display: block;

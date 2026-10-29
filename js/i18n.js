@@ -17,9 +17,9 @@ const TRANSLATIONS = {
     'nav.kontakt': 'Contact',
     'nav.menu': 'Menu',
 
-    'hero.title': 'Lakshmi Puja &amp; Kali Puja (Diwali) 2026',
-    'hero.dates': 'Lakshmi Puja · Sun 25 October · Kali Puja (Diwali) · Sun 8 November 2026',
-    'hero.lead': 'After Durga Puja we celebrate Lakshmi Puja and Kali Puja with Diwali, the festival of lights. Both take place at Habichergasse 10, 1160 Vienna. Families, friends and guests are warmly welcome.',
+    'hero.title': 'Kali Puja (Diwali) 2026',
+    'hero.dates': 'Sunday, 8 November 2026 · 3–9 pm',
+    'hero.lead': 'We celebrate Kali Puja together with Diwali, the festival of lights: puja for Mother Kali, diyas and Bengali food. The venue is Habichergasse 10, 1160 Vienna. Families, friends and guests are warmly welcome.',
     'hero.btnProgramm': 'See the dates',
     'hero.btnAnfahrt': 'Directions',
 
@@ -30,11 +30,9 @@ const TRANSLATIONS = {
     'feste.title': 'Festivals through the year',
     'feste.intro': 'Dates follow the Bengali lunar calendar (Panjika). We publish the detailed programme a few weeks before each festival.',
 
-    'date.lakshmi': '25',
     'date.kali': '8',
     'date.feb': 'Feb',
     'date.apr': 'Apr',
-    'date.okt2026': 'Oct 2026',
     'date.nov2026': 'Nov 2026',
     'date.2027': '2027',
     'date.herbst': 'Autumn',
@@ -44,7 +42,6 @@ const TRANSLATIONS = {
     'ev.durga.info': 'We will announce the exact dates in good time.',
     'ev.lakshmi.h': 'Lokhi/Lakshmi Puja',
     'ev.lakshmi.p': 'Here we honour Lakshmi, the goddess of prosperity.',
-    'ev.lakshmi.info': '<strong>5–9 pm</strong><br>Venue: <a href="https://www.google.com/maps/search/?api=1&amp;query=Habichergasse%2010%2C%201160%20Wien" target="_blank" rel="noopener">Habichergasse 10, 1160 Vienna</a>',
     'ev.kali.h': 'Kali Puja &amp; Diwali',
     'ev.kali.p': 'Puja for Mother Kali, together with the festival of lights with diyas and Bengali food.',
     'ev.kali.info': '<strong>3–9 pm</strong><br>Venue: <a href="https://www.google.com/maps/search/?api=1&amp;query=Habichergasse%2010%2C%201160%20Wien" target="_blank" rel="noopener">Habichergasse 10, 1160 Vienna</a>',
@@ -61,6 +58,8 @@ const TRANSLATIONS = {
     'cap.4': 'Cultural evening · Dance and singing',
     'cap.5': 'Kali Puja',
     'cap.6': 'Puja food',
+    'cap.7': 'Durga Puja 2026 · Community',
+    'cap.8': 'Durga Puja 2026 · Dhak',
     'img.1': 'Durga pratima in the decorated pandal',
     'img.2': 'Women playing Sindoor Khela',
     'img.3': 'Tea lights arranged in the shape of an Om on a brass plate for Diwali',
@@ -75,7 +74,7 @@ const TRANSLATIONS = {
 
     'tempel.title': 'Temple &amp; directions',
     'tempel.adresse': 'Address',
-    'tempel.ort': 'Venue for Lakshmi Puja &amp; Kali Puja (Diwali)',
+    'tempel.ort': 'Venue for Kali Puja (Diwali)',
     'tempel.route': 'Get directions',
     'map.title': 'Show map',
     'map.text': 'Loading the map sends data to Google. See our <a href="datenschutz.html">privacy policy</a> for details.',
@@ -125,6 +124,7 @@ const TRANSLATIONS = {
     'ds.rechte.p': 'You have the right to access, rectification, erasure, restriction of processing, objection and to lodge a complaint with a supervisory authority.',
 
     'rw.title': 'Durga Puja 2026 Rewind',
+    'rw.foto': 'Photo',
     'rw.intro': 'Five days, 17–21 October: thank you to everyone who celebrated and helped.',
     'rw.label': 'Pictures from Durga Puja 2026',
     'rw.dot': 'Picture {n}',
@@ -138,10 +138,8 @@ const TRANSLATIONS = {
     'rw.cap.5': '<strong>Celebrating together</strong> · Dancing and laughter before Ma Durga',
     'rw.alt.4': 'A young man in a blue kurta performing arati before Durga, Lakshmi, Saraswati, Ganesha and Kartik',
     'rw.alt.5': 'Women in festive saris dancing and laughing before the Durga pratima',
-    'rw.cap.6': '<strong>Community</strong> · Coming together in good spirits',
-    'rw.alt.6': 'A young man in a golden kurta laughing into the camera, surrounded by other guests in festive clothes',
-    'rw.cap.7': '<strong>Dhak</strong> · The sound of the puja',
-    'rw.alt.7': 'A man in a dark blue kurta playing the dhak before the Durga pratima',
+    'img.7': 'A young man in a golden kurta laughing into the camera, surrounded by other guests in festive clothes',
+    'img.8': 'A man in a dark blue kurta playing the dhak before the Durga pratima',
   },
 
   bn: {
@@ -153,9 +151,9 @@ const TRANSLATIONS = {
     'nav.kontakt': 'যোগাযোগ',
     'nav.menu': 'মেনু',
 
-    'hero.title': 'লক্ষ্মী পূজা ও কালী পূজা (দীপাবলি) ২০২৬',
-    'hero.dates': 'লক্ষ্মী পূজা · রবি ২৫ অক্টোবর · কালী পূজা (দীপাবলি) · রবি ৮ নভেম্বর ২০২৬',
-    'hero.lead': 'দুর্গা পূজার পর আমরা লক্ষ্মী পূজা এবং দীপাবলির সঙ্গে কালী পূজা উদযাপন করি। দুটি উৎসবই হবে Habichergasse 10, 1160 ভিয়েনায়। পরিবার, বন্ধুবান্ধব ও অতিথি সবাইকে সাদর আমন্ত্রণ।',
+    'hero.title': 'কালী পূজা (দীপাবলি) ২০২৬',
+    'hero.dates': 'রবিবার, ৮ নভেম্বর ২০২৬ · দুপুর ৩টা–রাত ৯টা',
+    'hero.lead': 'দীপাবলির সঙ্গে আমরা কালী পূজা উদযাপন করি: মা কালীর পূজা, প্রদীপ আর বাঙালি খাবার। স্থান: Habichergasse 10, 1160 ভিয়েনা। পরিবার, বন্ধুবান্ধব ও অতিথি সবাইকে সাদর আমন্ত্রণ।',
     'hero.btnProgramm': 'তারিখগুলি দেখুন',
     'hero.btnAnfahrt': 'পথনির্দেশ',
 
@@ -166,11 +164,9 @@ const TRANSLATIONS = {
     'feste.title': 'বছরের উৎসব',
     'feste.intro': 'তারিখগুলি বাংলা পঞ্জিকা অনুযায়ী। প্রতিটি উৎসবের বিস্তারিত অনুষ্ঠানসূচি আমরা কয়েক সপ্তাহ আগে জানিয়ে দিই।',
 
-    'date.lakshmi': '২৫',
     'date.kali': '৮',
     'date.feb': 'ফেব্রু',
     'date.apr': 'এপ্রিল',
-    'date.okt2026': 'অক্টো ২০২৬',
     'date.nov2026': 'নভে ২০২৬',
     'date.2027': '২০২৭',
     'date.herbst': 'শরৎ',
@@ -180,7 +176,6 @@ const TRANSLATIONS = {
     'ev.durga.info': 'সঠিক তারিখ আমরা যথাসময়ে জানিয়ে দেব।',
     'ev.lakshmi.h': 'লক্ষ্মী পূজা',
     'ev.lakshmi.p': 'এই দিনে আমরা ধনসম্পদের দেবী লক্ষ্মীর আরাধনা করি।',
-    'ev.lakshmi.info': '<strong>বিকেল ৫টা–রাত ৯টা</strong><br>স্থান: <a href="https://www.google.com/maps/search/?api=1&amp;query=Habichergasse%2010%2C%201160%20Wien" target="_blank" rel="noopener">Habichergasse 10, 1160 Wien</a>',
     'ev.kali.h': 'কালী পূজা ও দীপাবলি',
     'ev.kali.p': 'মা কালীর পূজা। সঙ্গে প্রদীপ আর বাঙালি খাবার নিয়ে আলোর উৎসব।',
     'ev.kali.info': '<strong>দুপুর ৩টা–রাত ৯টা</strong><br>স্থান: <a href="https://www.google.com/maps/search/?api=1&amp;query=Habichergasse%2010%2C%201160%20Wien" target="_blank" rel="noopener">Habichergasse 10, 1160 Wien</a>',
@@ -197,6 +192,8 @@ const TRANSLATIONS = {
     'cap.4': 'সাংস্কৃতিক সন্ধ্যা · নাচ ও গান',
     'cap.5': 'কালী পূজা',
     'cap.6': 'পুজোর খাবার',
+    'cap.7': 'দুর্গা পূজা ২০২৬ · আমরা সবাই',
+    'cap.8': 'দুর্গা পূজা ২০২৬ · ঢাক',
     'img.1': 'সাজানো মণ্ডপে দুর্গা প্রতিমা',
     'img.2': 'সিঁদুর খেলায় মহিলারা',
     'img.3': 'দীপাবলিতে পিতলের থালায় ওঁ-এর আকারে সাজানো প্রদীপ',
@@ -211,7 +208,7 @@ const TRANSLATIONS = {
 
     'tempel.title': 'মন্দির ও পথনির্দেশ',
     'tempel.adresse': 'ঠিকানা',
-    'tempel.ort': 'লক্ষ্মী পূজা ও কালী পূজা (দীপাবলি)-র স্থান',
+    'tempel.ort': 'কালী পূজা (দীপাবলি)-র স্থান',
     'tempel.route': 'রাস্তা দেখুন',
     'map.title': 'মানচিত্র দেখুন',
     'map.text': 'মানচিত্র লোড করলে তথ্য Google-এর কাছে যায়। বিস্তারিত আমাদের <a href="datenschutz.html">গোপনীয়তা নীতিতে</a>।',
@@ -261,6 +258,7 @@ const TRANSLATIONS = {
     'ds.rechte.p': 'আপনার তথ্য জানার, সংশোধনের, মুছে ফেলার, প্রক্রিয়াকরণ সীমিত করার, আপত্তি জানানোর এবং তত্ত্বাবধায়ক কর্তৃপক্ষের কাছে অভিযোগ করার অধিকার আছে।',
 
     'rw.title': 'ফিরে দেখা: দুর্গা পূজা ২০২৬',
+    'rw.foto': 'ছবি',
     'rw.intro': 'পাঁচ দিন, ১৭–২১ অক্টোবর: যাঁরা উৎসবে যোগ দিয়েছেন ও সাহায্য করেছেন, সবাইকে ধন্যবাদ।',
     'rw.label': 'দুর্গা পূজা ২০২৬-এর ছবি',
     'rw.dot': 'ছবি {n}',
@@ -274,10 +272,8 @@ const TRANSLATIONS = {
     'rw.cap.5': '<strong>একসাথে উৎসব</strong> · মায়ের সামনে নাচ আর হাসি',
     'rw.alt.4': 'নীল পাঞ্জাবিতে এক যুবক দুর্গা, লক্ষ্মী, সরস্বতী, গণেশ ও কার্তিকের সামনে আরতি করছেন',
     'rw.alt.5': 'উৎসবের শাড়িতে মহিলারা দুর্গা প্রতিমার সামনে হাসিমুখে নাচছেন',
-    'rw.cap.6': '<strong>আমরা সবাই</strong> · একসাথে মিলন আর খুশির মেজাজ',
-    'rw.alt.6': 'সোনালি পাঞ্জাবিতে এক যুবক ক্যামেরার দিকে হাসছেন, চারপাশে উৎসবের পোশাকে আরও অতিথি',
-    'rw.cap.7': '<strong>ঢাক</strong> · পূজার সুর',
-    'rw.alt.7': 'গাঢ় নীল পাঞ্জাবিতে একজন দুর্গা প্রতিমার সামনে ঢাক বাজাচ্ছেন',
+    'img.7': 'সোনালি পাঞ্জাবিতে এক যুবক ক্যামেরার দিকে হাসছেন, চারপাশে উৎসবের পোশাকে আরও অতিথি',
+    'img.8': 'গাঢ় নীল পাঞ্জাবিতে একজন দুর্গা প্রতিমার সামনে ঢাক বাজাচ্ছেন',
   },
 };
 
