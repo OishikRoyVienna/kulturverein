@@ -244,12 +244,12 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   background:
     linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 35%, rgb(20 8 8 / .45) 85%),
     /* Kali-Pratima: Ausschnitt so gewählt, dass das Gesicht zwischen Schrift und Rad liegt */
-    url("../images/hero-kali.jpg?v=6") center 40% / cover no-repeat,
+    url("../images/hero-kali.jpg?v=7") center 40% / cover no-repeat,
     #2A0E0E;
 }
 @media (max-width: 760px) {
   .hero {
-    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-kali.jpg?v=6");
+    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-kali.jpg?v=7");
     background-size: auto, cover;
     background-position: center, center 40%;
   }
