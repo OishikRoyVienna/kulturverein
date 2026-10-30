@@ -243,15 +243,15 @@ html[lang="bn"] { --font-body: "Noto Sans Bengali", system-ui, sans-serif; }
   color: var(--ink);
   background:
     linear-gradient(90deg, rgb(20 8 8 / .8) 0%, rgb(20 8 8 / .62) 35%, rgb(20 8 8 / .45) 85%),
-    /* Kali Puja: Kali im Tempel mit Diyas und Feuerwerk */
-    url("../images/hero-kali.jpg?v=4") center 30% / cover no-repeat,
+    /* Kali-Pratima: Ausschnitt so gewählt, dass das Gesicht zwischen Schrift und Rad liegt */
+    url("../images/hero-kali.jpg?v=6") center 40% / cover no-repeat,
     #2A0E0E;
 }
 @media (max-width: 760px) {
   .hero {
-    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-kali.jpg?v=4");
+    background-image: linear-gradient(rgb(20 8 8 / .7), rgb(20 8 8 / .82)), url("../images/hero-kali.jpg?v=6");
     background-size: auto, cover;
-    background-position: center, 66% 20%;   /* Kali steht im Bild rechts der Mitte */
+    background-position: center, center 40%;
   }
 }
 .hero-inner {
